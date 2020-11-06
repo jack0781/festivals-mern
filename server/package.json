@@ -1,0 +1,53 @@
+{
+  "name": "festivals-node",
+  "version": "1.0.0",
+  "description": "API for festivals",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd festivals && npm run build",
+    "install-client": "cd festivals && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node --experimental-modules src/index.js",
+    "client": "cd festivals && npm start",
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon src/index.js\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@sendgrid/mail": "^7.2.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-node6": "^0.4.0",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.3",
+    "mongoose-hidden": "^1.9.0",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
+    "slugify": "^1.4.5",
+    "url": "^0.11.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^7.8.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -2,7 +2,7 @@ import express from 'express'
 import Multer from 'multer'
 import {
   create,
-  getPosts ,
+  getFestivals ,
   Search,
   getSingle,
   update,
@@ -31,7 +31,7 @@ const upload = Multer({
 }).single('image')
 
 router.post('/',upload, create)
-router.get('/', getPosts )
+router.get('/', getFestivals )
 router.get('/:search', Search)
 router.post('/update/:id', upload, update)
 router.get('/:id', getSingle)

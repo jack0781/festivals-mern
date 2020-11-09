@@ -33,7 +33,7 @@ export const getSingle = async (req, res, next) => {
   }
 }
 
-export const getPosts  = async (req, res, next) => {
+export const getFestivals  = async (req, res, next) => {
   try {
     let query = req.query
     let skip = 0
@@ -92,7 +92,7 @@ export const update = async (req, res, next) => {
 
 export const Search = async (req, res, next) => {
   try {
-    let query = req.query.search
+    let query = req.params.search
     let futureMonth = moment(Date.now()).add(2, 'M');
     let futureMonthEnd = moment(futureMonth).endOf('month');
 

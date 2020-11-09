@@ -33,9 +33,7 @@ export default makeStyles((theme) => ({
     right: '20px',
     color: 'white',
   },
-  grid: {
-    display: 'flex',
-  },
+  
   details: {
     display: 'flex',
     justifyContent: 'space-between',

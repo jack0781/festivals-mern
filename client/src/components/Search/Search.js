@@ -7,12 +7,12 @@ import { Link, useLocation, BrowserRouter as Router } from "react-router-dom";
 
 const Search = ({ currentId, setCurrentId }) => {
   const [cardData, setCardData] = useState({ search: ''});
-  const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
+  const fevcard = useSelector((state) => (currentId ? state.fevcards.find((message) => message._id === currentId) : null));
   const dispatch = useDispatch();
   const classes = useStyles();
   useEffect(() => {
-    if (post) setCardData(post);
-  }, [post]);
+    if (fevcard) setCardData(fevcard);
+  }, [fevcard]);
   const handleChange = e => this.setState({ [e.target.name]: e.target.value });
   const clear = () => {
     setCurrentId(0);

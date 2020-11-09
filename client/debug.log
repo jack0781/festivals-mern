@@ -13,3 +13,10 @@
 [1106/194412.321:ERROR:file_io_win.cc(180)] CreateFile C:\Users\jaydeep\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Access is denied. (0x5)
 [1106/194412.331:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
 [1106/194412.346:ERROR:file_io_win.cc(180)] CreateFile C:\Users\jaydeep\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Access is denied. (0x5)
+[1109/103021.008:ERROR:file_io_win.cc(180)] CreateFile C:\Users\jaydeep\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Access is denied. (0x5)
+[1109/103021.060:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[1109/103021.060:ERROR:file_io_win.cc(180)] CreateFile C:\Users\jaydeep\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Access is denied. (0x5)
+[1109/104211.797:ERROR:file_io_win.cc(180)] CreateFile C:\Users\jaydeep\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Access is denied. (0x5)
+[1109/104211.802:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[1109/104211.804:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[1109/104211.805:ERROR:file_io_win.cc(180)] CreateFile C:\Users\jaydeep\AppData\Local\Google\Chrome\User Data\Crashpad\settings.dat: Access is denied. (0x5)

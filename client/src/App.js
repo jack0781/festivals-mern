@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Container, Typography, Grow, Grid, CardHeader } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import SearchBar from "material-ui-search-bar";
-import Posts from './components/Posts/Posts';
+import Fevcards from './components/Fevcards/Fevcards';
 import Header from './components/header';
 import Footer from './components/footer';
-import { getPosts } from './actions/posts';
+import { getFevcards } from './actions/fevcards';
 import useStyles from './styles';
 import memories from './images/memories.png';
 import './index.css'; 
@@ -17,9 +17,10 @@ const App = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    dispatch(getPosts());
+    dispatch(getFevcards());
   }, [currentId, dispatch]);
 
+  
   return (
     <div>
     <Header position="static" color="inherit">
@@ -28,12 +29,11 @@ const App = () => {
     </Header>
         <br></br>
     <Container>
-      <SearchBar style={{ margin: '0 auto', maxWidth: 400 }}/>
       <br></br>
       <Grow in>
         <Container>
             <Grid item xs={12} sm={7}>
-              <Posts setCurrentId={setCurrentId} />
+              <Fevcards setCurrentId={setCurrentId} />
             </Grid>
         </Container>
       </Grow>

@@ -92,7 +92,7 @@ export const update = async (req, res, next) => {
 
 export const Search = async (req, res, next) => {
   try {
-    let query = req.params.search
+    let query = req.query.search
     let futureMonth = moment(Date.now()).add(2, 'M');
     let futureMonthEnd = moment(futureMonth).endOf('month');
 

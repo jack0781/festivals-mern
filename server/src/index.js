@@ -5,6 +5,7 @@ import cors from 'cors';
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
 import festivalsRoutes from './routes/festivalsRoutes.js';
+import { handleError, ErrorHandler } from './config/ErrorHandler.js'
 
 const app = express();
 
@@ -15,6 +16,14 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 app.use("/upload",  express.static(__dirname + '/uploads'))
 app.use('/festivals', festivalsRoutes);
+
+app.use((req, res, next) => {
+  throw new ErrorHandler(404, 'Not found!')
+})
+
+app.use((err, req, res, next) => {
+  handleError(err, res)
+})
 
 const CONNECTION_URL = 'mongodb://localhost:27017/festivals';
 const PORT = process.env.PORT|| 5000;

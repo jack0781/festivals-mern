@@ -11,8 +11,11 @@
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node --experimental-modules src/index.js",
     "client": "cd festivals && npm start",
-    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon src/index.js\" \"npm run client\""
+    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon src/index.js\" \"npm run client\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "http://jack0781.github.io/festivals-mern",
   "author": "",
   "license": "ISC",
   "dependencies": {
